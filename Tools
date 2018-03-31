@@ -7,4 +7,7 @@ Production in a meaningful way and run our tests.
 Chef-Zero – Chef-Zero is a lightweight local Chef Server that our testing VMs use to mimic our live Chef environment.
 
 ChefDK – The Chef Development Kit provided by Opscode bundles various Chef tools together.  The beauty of ChefDK is that it comes
-with an embedded Ruby environment and the necessary Ruby Gems required by the tools.  This is a great improvement if you’ve ever had to deal with pre-ChefDK local Ruby/RVM configurations, fluctuating gem dependancies and breaking changes between tools.
+with an embedded Ruby environment and the necessary Ruby Gems required by the tools.  This is a great improvement if you’ve ever had to 
+deal with pre-ChefDK local Ruby/RVM configurations, fluctuating gem dependancies and breaking changes between tools.
+
+ ChefDK comes with chef-client, Berkshelf, Test Kitchen, ChefSpec, Foodcritic and more.
