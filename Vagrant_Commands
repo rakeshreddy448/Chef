@@ -1,4 +1,36 @@
 
+     Vagrant allows you to easily manage and control multiple virtual machines. It is built on top of VirtualBox and VMWare, and it 
+provides many exciting capabilities. You can create isolated development environments, experiment with new products and technologies,
+install new versions of existing packages, create your own private data center on your laptop, and run different operating systems.
+All that is available in an easy-to-manage and totally safe silo that can't interfere with your main activities and operating system. 
+
+--------------------------------------------------------------------------------------------------
+Installation
+Download the free VirtualBox for your operating system from the VirtualBox website.
+After download, just run the binary and install it.
+Download Vagrant.
+Again, just run the binary to install it.
+Initializing Vagrant
+Vagrant is a command-line based tool. Once installation is complete, open a console window and create a new directory called 
+'vagrant_intro'.
+cd ~
+ mkdir vagrant_intro
+ cd vagrant_intro
+
+This will be your working directory from now on. Inside the vagrant_intro directory, type:
+
+vagrant init ubuntu/trusty64
+
+You should see the following text:
+
+A 'Vagrantfile' has been placed in this directory. You are now
+ 
+ready to 'vagrant up' your first virtual environment! Please read
+ 
+the comments in the Vagrantfile as well as documentation on
+ 
+'vagrantup.com' for more information on using Vagrant. 
+-----------------------------------------------------------------------------------------------------------------
 vagrant plugin update
 vagrant plugin expunge --reinstall
 vagrant plugin repair
