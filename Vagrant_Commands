@@ -1,0 +1,4 @@
+
+vagrant plugin update
+vagrant plugin expunge --reinstall
+vagrant plugin repair
