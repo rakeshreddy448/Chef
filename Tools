@@ -10,4 +10,11 @@ ChefDK – The Chef Development Kit provided by Opscode bundles various Chef too
 with an embedded Ruby environment and the necessary Ruby Gems required by the tools.  This is a great improvement if you’ve ever had to 
 deal with pre-ChefDK local Ruby/RVM configurations, fluctuating gem dependancies and breaking changes between tools.
 
- ChefDK comes with chef-client, Berkshelf, Test Kitchen, ChefSpec, Foodcritic and more.
+ ChefDK comes with chef-client, Berkshelf, Test Kitchen, ChefSpec, knife,Foodcritic and more.
+ 
+ Workstation: This is where knife is installed and the administrator work from here
+ 
+ Cookbook: This is a bunch of recipes. Typically, a cookbook is created to achieve the full
+ installation, configuration of a task (i.e.: Install & Configure IIS)
+ 
+ Recipe: Written in Ruby, a recipe provide lines to achieve a task: Install a package, Start a service, etc.
