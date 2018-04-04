@@ -1,0 +1,31 @@
+Apache
+
+Edit
+
+sudo subl /etc/apache2/ports.conf 
+and change the 80 on the following line to something different :
+
+Listen 80
+If you just change the port or add more ports here, you will likely also have to change the VirtualHost statement in
+
+sudo subl /etc/apache2/sites-enabled/000-default.conf
+and change the 80 on the following line to something different :
+
+<VirtualHost *:80>
+then restart by :
+
+sudo service apache2 restart
+---------------------------------------------
+
+Nginx
+
+Edit
+
+/etc/nginx/sites-enabled/default
+and change the 80 on the following line :
+
+listen 80;
+then restart by :
+
+sudo service nginx restart
+-------------------------------------------------
