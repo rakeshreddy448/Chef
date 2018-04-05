@@ -35,6 +35,7 @@ vagrant plugin update
 vagrant plugin expunge --reinstall
 vagrant plugin repair
 vagrant box list
+vagrant box remove <boxname>
 Default vagrant box locations:
 Mac OS X and Linux: ~/.vagrant.d/boxes
 Windows: C:/Users/USERNAME/.vagrant.d/boxes
