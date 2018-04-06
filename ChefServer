@@ -1,1 +1,16 @@
 chef-server-ctl status---for checking status of ur server
+
+To Stop Server:
+  chef-server-ctl stop
+chef-server-ctl kill
+chef-server-ctl cleanse
+chef-server-ctl uninstall
+pkill -9 -u opscode
+pkill -9 -f postgres
+pkill -9 -f beam
+pkill -9 -f /opt/chef
+rm -rf /etc/opscode /etc/chef /opt/opscode /opt/chef /var/chef
+rm -rf /etc/chef-server /etc/chef /opt/chef-server /opt/chef /root/.chef /var/opt/chef-server
+rm -rf /var/chef /var/log/chef-server
+rpm -e chef-server
+rpm -e chef-server-core
