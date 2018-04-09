@@ -1,0 +1,10 @@
+
+
+Following are the steps to install Chef:
+-----------------------------------------
+Install Chef DK (Development Kit) on Chef Workstation
+Setup a Chef Server
+Create a Recipe or a Cookbook / download a Cookbook from Chef Supermarket in Workstation
+Upload a Cookbook on the Chef Server
+Connect A Node To The Chef Server
+Deploy the Cookbook from the Server to the Node
