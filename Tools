@@ -10,11 +10,75 @@ ChefDK – The Chef Development Kit provided by Opscode bundles various Chef too
 with an embedded Ruby environment and the necessary Ruby Gems required by the tools.  This is a great improvement if you’ve ever had to 
 deal with pre-ChefDK local Ruby/RVM configurations, fluctuating gem dependancies and breaking changes between tools.
 
- ChefDK comes with chef-client, Berkshelf, Test Kitchen, ChefSpec, knife,Foodcritic and more.
+ ChefDK comes with chef-client, Berkshelf, Test Kitchen, ChefSpec, 
+ ,Foodcritic and more.
  
  Workstation: This is where knife is installed and the administrator work from here
  
- Cookbook: This is a bunch of recipes. Typically, a cookbook is created to achieve the full
- installation, configuration of a task (i.e.: Install & Configure IIS)
+ Cookbook: This is a bunch of recipes. Multiple Recipes can be grouped together to form a Cookbook. A Cookbook defines a scenario and contains everything that is required to support that scenario:
+
+Recipes, which specifies the resources to use and the order in which they are to be applied
+Attribute values
+File distributions
+Templates
+Extensions to Chef, such as libraries, definitions, and custom resources
  
- Recipe: Written in Ruby, a recipe provide lines to achieve a task: Install a package, Start a service, etc.
+ Recipe:
+ Written in Ruby, a recipe provide lines to achieve a task: Install a package, Start a service, etc.A Recipe is a collection of 
+ resources that describes a particular configuration or policy. It describes everything that is required to configure part of a system. 
+ The user writes Recipes that describe how Chef manages applications and utilities (such as Apache HTTP Server, MySQL, or Hadoop) and
+ how they are to be configured.
+
+These Recipes describe a series of resources that should be in a particular state, i.e. Packages that should be installed, services 
+that should be running, or files that should be written.
+
+
+ Add to Bookmark  Email this Post  10.7K     1
+ 
+Chef Tutorial
+Chef Tutorial is the second blog of Chef blog series. In my previous blog, I have explained what is Chef, Configuration Management and how Chef achieves Configuration Management with the help of a use-case of Gannett.
+
+In this Chef Tutorial following topics will be covered:
+
+Chef Architecture
+Hands-on Demo
+
+I am sure after reading my previous blog you must be curious to know how exactly Chef works. The first section of this Chef Tutorial blog will explain you the Chef architecture in detail, which will clear all your doubts.
+
+Chef Tutorial – Chef Architecture
+As shown in the diagram below, there are three major Chef components:
+
+Workstation
+Server
+Nodes
+ Chef Architecture - Chef Tutorial - Edureka
+
+Chef Tutorial – Workstation
+
+The Workstation is the location from which all of Chef configurations are managed. This machine holds all the configuration data that can later be pushed to the central Chef Server. These configurations are tested in the workstation before pushing it into the Chef Server. A workstation consists of a command-line tool called Knife, that is used to interact with the Chef Server. There can be multiple Workstations that together manage the central Chef Server.
+
+Multiple Workstations - Chef Tutorial - Edureka
+
+Workstations are responsible for performing the below functions:
+
+Writing Cookbooks and Recipes that will later be pushed to the central Chef Server
+Managing Nodes on the central Chef Server
+Now, let us understand the above mentioned points one by one.
+
+Writing Cookbooks and Recipes that will later be pushed to the central Chef Server
+
+Recipes: A Recipe is a collection of resources that describes a particular configuration or policy. It describes everything that is required to configure part of a system. The user writes Recipes that describe how Chef manages applications and utilities (such as Apache HTTP Server, MySQL, or Hadoop) and how they are to be configured.
+
+These Recipes describe a series of resources that should be in a particular state, i.e. Packages that should be installed, services that should be running, or files that should be written.
+
+Later in the blog, I will show you how to write a Recipe to install Apache2 package on Chef Nodes by writing a ruby code in Chef Workstation.
+
+Cookbooks: Multiple Recipes can be grouped together to form a Cookbook. A Cookbook defines a scenario and contains everything that is required to support that scenario:
+
+Recipes, which specifies the resources to use and the order in which they are to be applied
+
+
+Knife utility: 
+This command line tool can be used to communicate with the central Chef Server from Workstation. Adding, removing, changing configurations of Nodes in a central Chef Server will be carried out by using this Knife utility. Using the Knife utility, Cookbooks can be uploaded to a central Chef Server and Roles, environments can also be managed. Basically, every aspect of the central Chef Server can be controlled from Workstation using Knife utility.
+
+A local Chef repository: This is the place where every configuration component of central Chef Server is stored. This Chef repository can be synchronized with the central Chef Server (again using the knife utility itself).
