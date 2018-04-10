@@ -39,3 +39,7 @@ vagrant box remove <boxname>
 Default vagrant box locations:
 Mac OS X and Linux: ~/.vagrant.d/boxes
 Windows: C:/Users/USERNAME/.vagrant.d/boxes
+
+//vagrant site
+
+https://www.vagrantup.com/docs/boxes.html
